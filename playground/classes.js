@@ -14,14 +14,39 @@ class Person {
     }
 };
 
+class Child extends Person {
+    constructor (name, age, like){
+         super(name, age); //harus memakai ini kalo gak bakalan errorr
+         this.like = like;
+    }
+     getGreeting (){
+        
+        return `Hiiiiiiiiiiiii my name is ${this.name} and i like ${this.like}`;
+    }
+}
+
+class Baby extends Person {
+    getGreeting () {
+        return `Waaaaaahhhh`;
+        }
+    }
+    
+
+var me = new Baby('Faza', 27);
+console.log(me.getGreeting());
+
+var anonymous = new Baby('Panji', 27, 'Cars');
+console.log(anonymous.getGreeting());
 
 
-var me = new Person('Faza', 27);
-console.log(me.getDescription());
-
-var anonymous = new Person();
-console.log(anonymous.getDescription());
 
 
-// console.log({age: 27}.toString());
-// console.log(me.toString());
+
+
+// var me = new Person('Faza', 27);
+// console.log(me.getGreeting());
+
+// var anonymous = new Child('Panji', 27, 'Cars');
+// console.log(anonymous.getGreeting());
+
+
